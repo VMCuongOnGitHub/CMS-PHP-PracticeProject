@@ -6,6 +6,7 @@ $db['db_user'] = 'root';
 $db['db_password'] = '';
 $db['db_database_name'] = 'cms-project';
 
+// Convert all valuable in to UPPERCASE
 foreach ($db as $key => $value) {
   define(strtoupper($key), $value);
 }
