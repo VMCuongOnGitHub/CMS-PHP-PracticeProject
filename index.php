@@ -25,20 +25,20 @@
                     $post_content = $row['post_content'];
 
                     echo "
-                    
-                    <h2>
-                        <a href='#'>{$post_title}</a>
-                    </h2>
-                    <p class='lead'>
-                        by <a href='index.php'>{$post_author}</a>
-                    </p>
-                    <p><span class='glyphicon glyphicon-time'></span> Posted on {$post_date} at 10:00 PM</p>
-                    <hr>
-                    <img class='img-responsive' src='{$post_image}' alt=''>
-                    <hr>
-                    <p>{$post_content}</p>
-                    <a class='btn btn-primary' href='#'>Read More <span class='glyphicon glyphicon-chevron-right'></span></a>
-                    <hr>
+
+                      <h2>
+                          <a href='#'>{$post_title}</a>
+                      </h2>
+                      <p class='lead'>
+                          by <a href='index.php'>{$post_author}</a>
+                      </p>
+                      <p><span class='glyphicon glyphicon-time'></span> Posted on {$post_date} at 10:00 PM</p>
+                      <hr>
+                      <img class='img-responsive' src='{$post_image}' alt=''>
+                      <hr>
+                      <p>{$post_content}</p>
+                      <a class='btn btn-primary' href='#'>Read More <span class='glyphicon glyphicon-chevron-right'></span></a>
+                      <hr>
 
                     ";
                   }
