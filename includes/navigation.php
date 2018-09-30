@@ -14,15 +14,19 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+
+                <?php
+                  // SELECT the elements that you want to display from database
+                  $query = "SELECT * FROM category";
+                  // Make a connection to database and execute the querry
+                  $select_all_category_query = mysqli_query($connection, $query);
+                  // Use while loop to show the value
+                  while ($row = mysqli_fetch_assoc($select_all_category_query)) {
+                    $category_title = $row['category_title'];
+                    echo "<li><a href='#'>{$category_title}</a></li>";
+                  }
+                ?>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
