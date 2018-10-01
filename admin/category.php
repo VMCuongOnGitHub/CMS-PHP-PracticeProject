@@ -58,6 +58,8 @@
                             }
                           ?>
 
+
+
                           <form class="" action="" method="post">
 
                             <div class="form-group">
@@ -71,7 +73,10 @@
 
                           </form>
 
-                        </div>
+
+                          <?php include 'update_category.php' ?>
+
+                          </div>
 
                         <div class="col-xs-6">
                           <table class="table table-bordered table-hover">
@@ -96,7 +101,8 @@
                                     <tr>
                                       <td>{$category_id}</td>
                                       <td>{$category_title}</td>
-                                      <td><a href='category.php?delete={$category_id}'>delete</td>
+                                      <td><a href='category.php?delete={$category_id}'>Delete</td>
+                                      <td><a href='category.php?update={$category_id}'>Edit</td>
                                     </tr>
                                   ";
                                 }
