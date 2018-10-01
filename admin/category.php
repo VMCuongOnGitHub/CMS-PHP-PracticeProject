@@ -20,6 +20,19 @@
                             Welcome to my litle project!!!
                             <small>Author</small>
                         </h1>
+
+                        <div class="col-xs-6">
+                          <form class="" action="index.html" method="post">
+                            <div class="form-group">
+                              <label for="category_title">Add Category</label>
+                              <input class="form-control" type="text" name="category_title" value="">
+                            </div>
+                            <div class="form-group">
+                              <input class="btn btn-primary" type="submit" name="submit" value="Add Category">
+                            </div>
+                          </form>
+                        </div>
+
                     </div>
                 </div>
                 <!-- /.row -->
