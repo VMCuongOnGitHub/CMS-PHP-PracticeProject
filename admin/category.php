@@ -33,6 +33,37 @@
                           </form>
                         </div>
 
+                        <div class="col-xs-6">
+                          <table class="table table-bordered table-hover">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Category Title</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <?php
+                                // SELECT the elements that you want to display from database
+                                $query = "SELECT * FROM category";
+                                // Make a connection to database and execute the querry
+                                $select_all_category_query = mysqli_query($connection, $query);
+                                // Use while loop to show the value
+                                while ($row = mysqli_fetch_assoc($select_all_category_query)) {
+                                  $category_id = $row['category_id'];
+                                  $category_title = $row['category_title'];
+                                  echo "
+                                    <tr>
+                                      <td>{$category_id}</td>
+                                      <td>{$category_title}</td>
+                                    </tr>
+                                  ";
+                                }
+                              ?>
+                            </tbody>
+                          </table>
+                        </div>
+
                     </div>
                 </div>
                 <!-- /.row -->
