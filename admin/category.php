@@ -38,6 +38,23 @@
                                   die('Query is not right' . mysqli_error($connection));
                                 }
                               }
+
+                            }
+                          ?>
+
+                          <?php
+                            if (isset($_GET['delete'])) {
+                              $category_id = $_GET['delete'];
+
+                                $query = "DELETE FROM category WHERE category_id = {$category_id}";
+
+                                $delete_category = mysqli_query($connection, $query);
+                                header('Location: category.php');
+
+                                if (!$delete_category) {
+                                  die('Query is not right' . mysqli_error($connection));
+                                }
+
                             }
                           ?>
 
@@ -53,7 +70,6 @@
                             </div>
 
                           </form>
-
 
                         </div>
 
@@ -80,6 +96,7 @@
                                     <tr>
                                       <td>{$category_id}</td>
                                       <td>{$category_title}</td>
+                                      <td><a href='category.php?delete={$category_id}'>delete</td>
                                     </tr>
                                   ";
                                 }
