@@ -22,15 +22,39 @@
                         </h1>
 
                         <div class="col-xs-6">
-                          <form class="" action="index.html" method="post">
+                          <?php
+                            if (isset($_POST['submit'])) {
+                              $category_title = $_POST['category_title'];
+
+                              if ($category_title == '' || empty($category_title)) {
+                                echo"You should enter a value";
+                              } else {
+                                $query = "INSERT INTO category (category_title) ";
+                                $query .= "VALUE ('{$category_title}')";
+
+                                $create_category = mysqli_query($connection, $query);
+
+                                if (!$create_category) {
+                                  die('Query is not right' . mysqli_error($connection));
+                                }
+                              }
+                            }
+                          ?>
+
+                          <form class="" action="" method="post">
+
                             <div class="form-group">
                               <label for="category_title">Add Category</label>
                               <input class="form-control" type="text" name="category_title" value="">
                             </div>
+
                             <div class="form-group">
                               <input class="btn btn-primary" type="submit" name="submit" value="Add Category">
                             </div>
+
                           </form>
+
+
                         </div>
 
                         <div class="col-xs-6">
