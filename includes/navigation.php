@@ -1,3 +1,6 @@
+<?php include "functions.php"; ?>
+
+
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
@@ -25,8 +28,8 @@
                     $category_title = $row['category_title'];
                     echo "<li><a href='#'>{$category_title}</a></li>";
                   }
-
                 ?>
+
                 <li><a href='admin/index.php'>admin</a></li>
             </ul>
         </div>
