@@ -1,5 +1,7 @@
 <?php include "functions.php"; ?>
+<?php
 
+?>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
